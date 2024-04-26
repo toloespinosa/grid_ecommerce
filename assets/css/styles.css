@@ -1,0 +1,137 @@
+.grid-container{ 
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+    grid-template-rows: 50px auto 40px ;
+    grid-template-areas: 
+    "header header"
+    "side main" 
+    "footer footer";
+    gap: 10px;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.header {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.side{
+    grid-area: side;
+    padding: 20px;
+}
+
+.category-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-menu li {
+    margin-bottom: 10px;
+}
+
+.category-menu li:nth-child(1)::after {
+    content: "(10)";
+}
+
+.category-menu li:nth-child(2)::after {
+    content: "(7)";
+}
+
+.category-menu li:nth-child(3)::after {
+    content: "(32)";
+}
+
+.category-menu li:nth-child(4)::after {
+    content: "(9)";
+}
+
+.category-menu li::after {
+    color: #888; /* Color gris */
+    position: absolute;
+}
+
+main{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    max-width: 300px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.product-container img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.product-container h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    
+}
+
+.product-container p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.product-container button {
+    background-color: #007bff;
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+
+}
+
+.product-container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.footer{
+    display: flex;
+    grid-area: footer;
+    background-color: #d4d4d4;
+    justify-content: center;
+    align-items: center;
+
+}
